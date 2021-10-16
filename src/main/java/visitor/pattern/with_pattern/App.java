@@ -9,6 +9,7 @@ import java.util.List;
 public class App {
 
   public static void main( String[] args ){
+    System.out.println("------------SumTest-------------------------");
     TwoElement two1 = new TwoElement(3, 3);
     TwoElement two2 = new TwoElement(2, 7);
     ThreeElement three = new ThreeElement(3, 4, 5);
@@ -25,5 +26,16 @@ public class App {
     visitor.visit(numberElementList);
 
     System.out.println(visitor.getTotalSum());
+
+
+    System.out.println("------------MultiplyTest-------------------------");
+
+    System.out.println("\nVisiting element list with MultiplyVisitor");
+    new MultiplyVisitor().visit(numberElementList);
+
+    TotalMultiplyVisitor prodVisitor = new TotalMultiplyVisitor();
+    prodVisitor.visit(numberElementList);
+
+    System.out.println(prodVisitor.getTotalProd());
   }
 }
