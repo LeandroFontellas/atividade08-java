@@ -1,4 +1,4 @@
-package visitor.pattern;
+package visitor.pattern.without_pattern;
 
 /**
  * Hello world!
